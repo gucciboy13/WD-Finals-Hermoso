@@ -88,7 +88,7 @@ body {
   color: #e0ffff; 
   overflow: hidden;
 
-  background-image: url('/assets/img/landing.JPG');
+  background-image: url('../img/landing.JPG');
   background-size: cover;
   background-position: 10% 60%;
   background-repeat: no-repeat;
