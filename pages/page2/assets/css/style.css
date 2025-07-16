@@ -1,0 +1,169 @@
+:root {
+    --primary-color: #00f0ff;
+    --background-color: #0a0a23;
+    --text-color: #cce7ff;
+  }
+  
+  body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #011122;
+    border-bottom: 1px solid #003344;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .logo span {
+    color: #33ffff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: var(--primary-color);
+    background-color: #003344;
+    box-shadow: 0 0 10px var(--primary-color);
+  }
+  
+  .education-main {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-shadow: 0 0 12px var(--primary-color);
+  }
+  
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .edu-card {
+    background: #0f1b2b;
+    border: 1px solid #003344;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 0 20px #00f0ff33;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    animation: slideIn 1.2s ease forwards;
+  }
+  
+  .edu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px #00f0ffaa;
+  }
+  
+  .edu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .edu-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .edu-card .course {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #b0e0ff;
+  }
+  
+  .edu-card .year {
+    font-size: 0.95rem;
+    color: #88b0c7;
+    margin-bottom: 15px;
+  }
+  
+  .edu-card p {
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #cce7ff;
+  }
+  
+  footer {
+    background-color: #011122;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    color: #336699aa;
+    border-top: 1px solid #003344;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .edu-card h2 {
+      font-size: 1.3rem;
+    }
+  
+    .edu-card .course {
+      font-size: 1rem;
+    }
+  }
